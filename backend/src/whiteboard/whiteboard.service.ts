@@ -35,8 +35,6 @@ export class WhiteboardService {
   private readonly rooms = new Map<string, Room>();
   private readonly sessions = new Map<string, Session>();
 
-  // ── Helpers ──────────────────────────────────────────────────────────────────
-
   private generateRoomId(): string {
     let id: string;
     do {
@@ -71,8 +69,6 @@ export class WhiteboardService {
     return strokeId ? { from, to, strokeId } : { from, to };
   }
 
-  // ── Room management ───────────────────────────────────────────────────────────
-
   createRoom(socketId: string, name: unknown) {
     const roomId = this.generateRoomId();
     this.rooms.set(roomId, { lines: [] });
@@ -100,8 +96,7 @@ export class WhiteboardService {
     return session;
   }
 
-  // ── Canvas operations ─────────────────────────────────────────────────────────
-
+  
   addLine(roomId: string, segment: Segment): void {
     this.rooms.get(roomId)?.lines.push(segment);
   }
