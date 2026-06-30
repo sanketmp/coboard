@@ -9,7 +9,11 @@ import {
 import { Server, Socket } from 'socket.io';
 import { WhiteboardService } from './whiteboard.service';
 
-@WebSocketGateway({ cors: true })
+@WebSocketGateway({ cors: {
+  origin:[
+    'http://localhost:3000'
+  ],
+} })
 export class WhiteboardGateway implements OnGatewayDisconnect {
   @WebSocketServer()
   private readonly server: Server;

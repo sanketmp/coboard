@@ -2,8 +2,8 @@ const PENCIL_COLOR = "#1f2328";
 const PENCIL_WIDTH = 3;
 const MIN_ZOOM = 0.05;
 const MAX_ZOOM = 20;
-
-const socket = io();
+const BACKEND_URL = window.location.hostname === 'localhost' ? '' : 'https://coboard.up.railway.app'
+const socket = io(BACKEND_URL);
 
 // DOM refs
 const canvas = document.getElementById("whiteboard");
