@@ -11,7 +11,7 @@ import { WhiteboardService } from './whiteboard.service';
 
 @WebSocketGateway({ cors: {
   origin:[
-    'http://localhost:3000'
+    'http://localhost:3000','https://coboard-eight.vercel.app'
   ],
 } })
 export class WhiteboardGateway implements OnGatewayDisconnect {
