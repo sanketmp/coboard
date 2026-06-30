@@ -84,4 +84,4 @@ graph TB
 ```
 ---
 
-Updated version of previous [version](https://github.com/sanketmp/realtime-whiteboard)
+Updated version of previous [project](https://github.com/sanketmp/realtime-whiteboard)
