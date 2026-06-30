@@ -6,8 +6,7 @@
     "build": "nest build",
     "start": "nest start",
     "start:dev": "nest start --watch",
-    "start:prod": "node dist/main",
-    "prestart:prod": "npm run build"
+    "start:prod": "node dist/main"
   },
   "dependencies": {
     "@nestjs/common": "^10.3.0",
